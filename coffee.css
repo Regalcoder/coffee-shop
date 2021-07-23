@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/* this here is the root style. it applies to all elements of the html page. it is the self declared default 
+style of the designer.  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 17px;
+    scroll-behavior: smooth; 
+}  
+
+/* variable declarations. variables are created css constants that are declared and called/ reusable within different 
+style elements just by calling them */
+:root{
+    --blue: #9abec1;
+    --black: #333030;
+    --red: #e9242e;
+}
+/*
+#check-box, .menu{
+display: none;
+} */
+
+/* nav bar styling*/
+nav{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+    padding: 1.5rem 0;
+    color: white; 
+    display: absolute;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 700px;
+    text-transform: uppercase;
+}
+
+    /*style for the page logo, that is the two dots beside the logo. Again the '.logo' and '.dot' were both declared 
+    here cos this style applies to the child elements of the logo class. So by this the browser understands that
+    its to apply the style of both parent and child to the page.  */
+.logo .dot{
+    display: inline-block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--black);
+    margin: 0.5rem 0;
+   }
+
+ /*this style orders the menu display to flex style  */
+.nav-bar-links{
+    display: flex;
+}
+
+/*this removes the permanent line that comes with the menu links and pushes all menu elemenst to the right.
+this line is a default line and cannot be styled by css, it can only be removed and other style manualy added 
+by designer.  */
+.nav-bar-links a{
+    text-decoration: none;
+    margin-right: 1rem;
+    color: white;
+    
+    }
+/* this closes the margin space between the last menu element and the page border.  */
+.nav-bar-links a:last-child{
+    margin: 0rem;
+}
+
+/*this styles the color of the menu link to blue on hover only  */
+a:hover{
+    color: var(--blue);
+}
+
+/* to add a horizontal line to the link with a transition property. the '.nav-bar-links' class was added 
+to this declaration cos the 'a' element is a child under it and what we're declaring here affects all elements
+under this tree. if we were only designing the element under one of the 'a' tags then this won't have been 
+necessary and we would have instead had to use only either a class or an i.d. the '::after' pseudo element here 
+was added to tell browser to add style after the elements contained in a tag. the 'display: block' element 
+is what adds the line to the link*/
+.nav-bar-links a::after{
+    content: "";
+    display: block; 
+    height: 3px;
+    background-color: var(--blue);
+   width: 0%;
+   transition: all ease-in-out 300ms;
+}
+
+/* to add line to the menu link on hover only */
+.nav-bar-links a:hover::after{
+    width: 100%;
+    }

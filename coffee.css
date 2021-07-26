@@ -30,7 +30,10 @@ nav{
    align-items: center;
     padding: 1.5rem 0;
     color: white; 
-    display: absolute;
+   position: absolute; 
+    top: 0; 
+   z-index: 2; 
+    width: 80%; 
 }
 .logo{
     display: flex;
@@ -63,7 +66,7 @@ by designer.  */
 .nav-bar-links a{
     text-decoration: none;
     margin-right: 1rem;
-    color: white;
+   color: white; 
     
     }
 /* this closes the margin space between the last menu element and the page border.  */
@@ -75,6 +78,9 @@ by designer.  */
 a:hover{
     color: var(--blue);
 }
+    .nav-bar-links .active{
+        color: var(--blue);
+    }
 
 /* to add a horizontal line to the link with a transition property. the '.nav-bar-links' class was added 
 to this declaration cos the 'a' element is a child under it and what we're declaring here affects all elements
@@ -94,4 +100,94 @@ is what adds the line to the link*/
 /* to add line to the menu link on hover only */
 .nav-bar-links a:hover::after{
     width: 100%;
+    }
+
+    /* scroll bar styling */
+    ::-webkit-scrollbar{
+       width: 12px; 
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(125,6,6,1) 41%, rgba(0,212,255,1) 100%);
+        border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(125,6,6,1) 41%, rgba(0,212,255,1) 100%);
+}
+    ::-webkit-scrollbar-track{
+        background: #e4a576;
+    }
+
+    /* intro or hero section styling */
+    .head{
+        background: var(--blue);
+        padding: 5rem 10% 0rem 10%;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+/* image and its background styling */
+   .main_bg{
+         background: var(--black);
+         width: 65rem;
+         height: 37rem;
+         border-radius: 20rem;
+         transform: rotate(-45deg);
+         right: -15.3rem;
+         top: -10rem;
+         position: absolute;
+         z-index: 0;
+         }
+
+   .main_bg img{
+       transform: rotate(45deg);
+       height: 35rem;
+      margin-left: 7rem;
+      }
+
+    .head .intro{
+        margin-bottom: 7rem;
+        z-index: 1;
+        }
+
+    .head .intro h1{
+        font-size: 70px;
+    }
+ 
+    .head .intro h2{ 
+        margin: 1rem 0;
+        font-size: 35px;
+    }
+
+    .head .intro .button{
+        background: var(--red);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 0.7rem 1rem;
+        border-radius: 3px;
+        box-shadow: 10px 10px 24px -1px rgba(123, 123, 123, 0.75);
+    }
+    .scroll{
+        position: absolute;
+        bottom: 2rem;
+       }
+    .scroll a{
+        color: var(--black);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }   
+
+    .scroll a:hover{
+        color: var(--black);
+    }
+    
+/* brands section styling */
+    .brands{
+        height: 100vh;
     }

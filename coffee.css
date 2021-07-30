@@ -189,5 +189,92 @@ is what adds the line to the link*/
     
 /* brands section styling */
     .brands{
-        height: 100vh;
+       min-height: 100vh;
+        padding: 7rem 10%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .brands .bottom_image{
+       position: absolute;
+       right: -15rem; 
+       bottom: -4rem; 
+       z-index: 2; 
+    }
+
+    .brand{
+        display: flex;
+      align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10rem; 
+    }
+    .brand:last-child{
+        margin-bottom: 0;
+    }
+    .brand h2{
+        font-size: 60px;
+        color: var(--black);
+        margin-bottom: 1rem;
+    }
+    .brand img{
+        height: 15rem;
+    }
+    .brand .img{
+        flex: 1;
+    }
+    .brand .desc{
+        flex: 1;
+    }
+    .row_reverse{
+        flex-direction: row-reverse;
+    }
+    .brand.row_reverse .img{
+        display: flex;
+        justify-content: flex-end;
+    }
+    /* footer styling*/
+    footer{
+        background: var(--black);
+        color: white;
+        padding: 3rem 0;
+        text-align: center;
+    }
+    footer .logo{
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    footer .logo .dot{
+        background: var(--blue);
+    }
+    footer h3{
+        /* font-size: 10px; */
+        color: var(--blue);
+        margin: 0 auto 1rem auto;
+    }
+    footer p{
+        width: 50%;
+        margin: 0 auto 1rem auto;
+        color: rgb(156, 156, 156);
+    }
+    /* footer social icons styling */
+    footer .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .socials a{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--blue);
+        margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .socials a:last-child{
+       margin-right: 0;
+    }
+    footer .socials svg{
+        color: white;
     }

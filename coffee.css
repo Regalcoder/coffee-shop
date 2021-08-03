@@ -18,10 +18,9 @@ style elements just by calling them */
     --black: #333030;
     --red: #e9242e;
 }
-/*
 #check-box, .menu{
 display: none;
-} */
+} 
 
 /* nav bar styling*/
 nav{
@@ -278,3 +277,40 @@ is what adds the line to the link*/
     footer .socials svg{
         color: white;
     }
+
+    /* mobile responsive styling */
+   @media (max-width: 375px){
+       /* nav styling */
+       .nav-bar-links{
+           position: fixed;
+           top: 0;
+           /* this hides the nav bar and only displays it when checkbox is clicked */
+           right: -250px;
+
+           height: 100vh;
+           width: 250px;
+           background: rgb(20, 20, 20);
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+           z-index: 98;
+           transition: all ease-in-out 500ms;
+       }
+       /* menu class styling for checkbox */
+       .menu{
+           cursor: pointer;
+           background: var(--black);
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           z-index: 99;
+           position: fixed;
+           right: 2.5rem;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+       #check-box:checked ~ .nav-bar-links{
+           right: 0;
+       }
+   }

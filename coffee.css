@@ -174,6 +174,7 @@ is what adds the line to the link*/
     .scroll{
         position: absolute;
         bottom: 2rem;
+        z-index: 1;
        }
     .scroll a{
         color: var(--black);
@@ -279,12 +280,13 @@ is what adds the line to the link*/
     }
 
     /* mobile responsive styling */
-   @media (max-width: 375px){
+   @media (max-width: 750px){
        /* nav styling */
        .nav-bar-links{
            position: fixed;
            top: 0;
-           /* this hides the nav bar and only displays it when checkbox is clicked */
+           /* this hides the nav bar and only 
+           displays it when checkbox is clicked */
            right: -250px;
 
            height: 100vh;
@@ -313,4 +315,52 @@ is what adds the line to the link*/
        #check-box:checked ~ .nav-bar-links{
            right: 0;
        }
+       /* coffee cup body section styling */
+       .head .intro{
+           margin-bottom: 0;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           height: 90vh;
+           text-align: center;
+       }
+       .head .intro h1{
+           font-size: 50px;
+       }
+       .head .intro h2{
+           font-size: 25px;
+       }
+       .main_bg{
+           width: 32rem;
+           height: 12rem;
+           right: -13rem;
+           top: 14rem;
+           display: flex;
+           align-items: center;
+       }
+       .main_bg img{
+           height: 14rem;
+           margin-left: 1.5rem;
+          }
+          /* brands styling */
+          .brand{
+              flex-direction: column;
+             align-items: flex-start; 
+             margin-bottom: 5rem; 
+          }
+          .brand h2{
+              font-size: 25px;
+          }
+          .brand img{
+              height: 9rem;
+             margin-bottom: 2rem; 
+          }
+          .brands .bottom_image{
+              right: -17rem;
+              bottom: -9rem;
+          }
+          /* footer styling */
+          footer p{
+              width: 80%;
+          }
    }
